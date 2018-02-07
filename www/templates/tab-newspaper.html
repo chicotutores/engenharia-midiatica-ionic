@@ -1,0 +1,13 @@
+<ion-view view-title="Newspaper">
+  <ion-content>
+    <ion-list>
+      <ion-item class="item-remove-animate item-icon-right item-text-wrap item-thumbnail-left"
+                ng-repeat="newspaper in newspapers"
+                ng-click="openNewspaper(newspaper.url)">
+        <img ng-src="{{newspaper.imagem}}">
+        <h2>{{newspaper.nome}}</h2>
+        <p>{{newspaper.url}}</p>
+        </ion-item>
+      </ion-list>
+  </ion-content>
+</ion-view>

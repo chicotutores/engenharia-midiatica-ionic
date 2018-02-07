@@ -1,0 +1,126 @@
+/*
+To customize the look and feel of Ionic, you can override the variables
+in ionic's _variables.scss file.
+
+For example, you might change some of the default colors:
+
+$light:                           #fff !default;
+$stable:                          #f8f8f8 !default;
+$positive:                        #387ef5 !default;
+$calm:                            #11c1f3 !default;
+$balanced:                        #33cd5f !default;
+$energized:                       #ffc900 !default;
+$assertive:                       #ef473a !default;
+$royal:                           #886aea !default;
+$dark:                            #444 !default;
+*/
+
+// The path for our ionicons font files, relative to the built CSS in www/css
+$ionicons-font-path: "../lib/ionic/fonts" !default;
+
+// Include all of Ionic
+
+@import "www/lib/ionic/scss/ionic";
+
+.search-bar {
+    top: 44px;
+    transition: all ease-in-out 250ms;
+    z-index: 15;
+
+    button,
+    input {
+        transition: all ease-in-out 250ms;
+    }
+
+    button.ng-hide {
+        margin-right: -67px;
+    }
+
+    &.search-bar-focused {
+        top: 0;
+    }
+}
+
+.has-search-bar {
+    margin-top: -2px;
+    top: 88px;
+    transition: top ease-in-out 250ms;
+
+    &.search-bar-focused {
+        top: 44px;
+    }
+}
+
+platform-ios.platform-cordova:not(.fullscreen) {
+    .search-bar.bar-header {
+        height: 44px;
+        top: 64px;
+
+        &.search-bar-focused {
+            height: 64px;
+            top: 0;
+        }
+    }
+
+    .search-bar.bar-header.item-input-inset {
+        .item-input-wrapper {
+            transition: all ease-in-out 250ms;
+            margin-top: 0 !important;
+        }
+    }
+
+    .search-bar.search-bar-focused.bar-header.item-input-inset {
+        .item-input-wrapper {
+            margin-top: 19px !important;
+        }
+    }
+
+    .has-search-bar {
+        top: 108px;
+
+        &.search-bar-focused {
+            top: 64px;
+        }
+    }
+}
+
+#thumbsResultPositive{
+  float: right;
+  margin-top: -30px;
+  margin-right: -40px;
+  margin-bottom: 20px;
+}
+
+#thumbsResultNegative{
+  float: right;
+  margin-top: -30px;
+
+}
+
+.thumbsResult{
+font-size: 30px;
+}
+
+#chartDiv{
+  position: relative;
+  top: 100%;
+  transform: translateY(20%);
+}
+
+.filterList{
+  transition: .3s linear all;
+  height: 50px;
+  overflow: hidden;
+}
+
+.filterList.ng-hide {
+  height:0;
+}
+
+.filterIcon{
+  font-size:40px;
+}
+
+#iconNewspaper{
+  margin-left: 32px;
+}

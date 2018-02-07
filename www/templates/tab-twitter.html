@@ -1,0 +1,33 @@
+<ion-view view-title="Fala Cidadão">
+
+  <ion-content class="padding">
+
+    <!--<form ng-submit="searchHashtag()"><div class="item item-input-inset">-->
+      <!--<label class="item-input-wrapper">-->
+        <!--<input type="text" placeholder="Hashtag (sem o #)" ng-model="hashtagText">-->
+      <!--</label>-->
+      <!--<input type="submit" id="submit" value="Buscar" class="button button-small button-stable"/>-->
+    <!--</div></form>-->
+
+    <div class="card" ng-hide="tweets.length">
+      <div class="item item-text-wrap">
+        Não foi encontrado nenhum tweet com as suas palavras chaves
+      </div>
+    </div>
+
+
+    <div ng-repeat="tweet in tweets" class="list card" ng-click="openTweet(tweet)">
+      <div class="item item-avatar">
+        <img ng-src="{{tweet.user.profile_image_url}}"/>
+        <h2>{{tweet.user.name}}</h2>
+        <p>{{correctTimestring(tweet.created_at) | date:'d/M/yy h:mm a'}}</p>
+      </div>
+
+      <div class="item item-body">
+        <p ng-bind-html="tweet.text"></p>
+        <img ng-if="tweet.extended_entities" ng-src="{{ tweet.extended_entities.media[0].media_url }}" style="width: 100%;"/>
+      </div>
+
+    </div>
+  </ion-content>
+</ion-view>

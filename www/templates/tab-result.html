@@ -1,0 +1,23 @@
+<ion-view view-title="Resultados">
+  <ion-content>
+    <ion-list>
+      <ion-item class="item-icon-right item-text-wrap"
+                ng-repeat="(periodo, classificacoes) in resultados"
+                ng-style="{'min-height':'70px'}"
+                type="item-text-wrap"
+                ng-click="showDetail(periodo)">
+        <script>console.log("ajldnasjlkdn")</script>
+        <h2 style="margin-top: 5px">{{periodo}}</h2>
+        <div id="thumbsResultPositive">
+          <i class="ion-thumbsup balanced thumbsResult"></i>
+          <p>{{classificacoes.P}}</p>
+        </div>
+        <div id="thumbsResultNegative">
+          <i class="ion-thumbsdown assertive thumbsResult"></i>
+          <p>{{classificacoes.NG}}</p>
+        </div>
+        </ion-option-button>
+      </ion-item>
+    </ion-list>
+  </ion-content>
+</ion-view>

@@ -1,0 +1,12 @@
+{
+  "name": "EngenhariaMidiatica",
+  "app_id": "f05e428e",
+  "gulpStartupTasks": [
+    "sass",
+    "watch"
+  ],
+  "watchPatterns": [
+    "www/**/*",
+    "!www/lib/**/*"
+  ]
+}

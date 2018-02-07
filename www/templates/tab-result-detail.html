@@ -1,0 +1,13 @@
+<ion-view view-title="Gráfico">
+  <ion-content ng-controller="ResultCtrl" scroll="false">
+    <div id="chartDiv">
+      <canvas class="chart chart-pie"
+              height="50px"
+              width="50px"
+              chart-data="data"
+              chart-labels="labels"
+              legend="true"
+              chart-click="onClick"></canvas>
+    </div>
+  </ion-content>
+</ion-view>

@@ -1,0 +1,15 @@
+/* Empty. Add your own CSS if you like */
+
+
+.loginImage {
+  width: 100%;
+  height: auto;
+  border-radius: 100%;
+  -webkit-border-radius: 100%;
+  -moz-border-radius: 100%;
+}
+
+.text-wrap{
+	overflow: visible;
+  	white-space: normal; 
+}
